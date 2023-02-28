@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Packages
 {
-    internal class PackageTypeManager
+    public class PackageTypeManager
     {
         private static readonly Dictionary<PackageType, Tuple<byte, byte>> TypeDictionary = new Dictionary<PackageType, Tuple<byte, byte>>();
 

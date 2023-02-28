@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Packages
 {
-    internal class FieldAttribute
+    [AttributeUsage(AttributeTargets.Field)]
+    public class FieldAttribute : Attribute
     {
+        public byte FieldId { get; }
+
+        public FieldAttribute(byte fieldId)
+        {
+            FieldId = fieldId;
+        }
     }
 }

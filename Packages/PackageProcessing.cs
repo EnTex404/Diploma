@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Packages
 {
-    internal partial class Package
+    public partial class Package
     {
         public byte[] ToPackage()
         {

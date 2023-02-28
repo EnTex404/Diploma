@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Packages
 {
-    internal partial class Package
+    public partial class Package
     {
         private Package() { }
         public byte PackageType { get; private set; }

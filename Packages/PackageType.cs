@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Packages
 {
-    internal enum PackageType
+    public enum PackageType
     {
         UNKNOWN,
         GET,

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Packages
 {
-    internal partial class Package
+    public partial class Package
     {
         public PackageField GetField(byte id)
         {
@@ -82,6 +82,50 @@ namespace Packages
             }
 
             SetValue(id, bytes);
+        }
+
+        private void SetValue(byte id, byte[] rawData)
+        {
+            var field = GetField(id);
+
+            field = CheckField(id, field);
+
+            SetFieldValues(rawData, field);
+        }
+
+        public void SetValueRaw(byte id, byte[] data)
+        {
+            SetValue(id, data);
+        }
+
+        public byte[] GetValueRaw(byte id)
+        {
+            var field = GetField(id);
+
+            CheckFieldFound(id, field);
+
+            return field.Contents;
+        }
+
+        private static void SetFieldValues(byte[] bytes, PackageField field)
+        {
+            field.FieldSize = (byte)bytes.Length;
+            field.Contents = bytes;
+        }
+
+        private PackageField CheckField(byte id, PackageField field)
+        {
+            if (field == null)
+            {
+                field = new PackageField()
+                {
+                    FieldID = id
+                };
+
+                Fields.Add(field);
+            }
+
+            return field;
         }
 
         private static void CheckFieldSize<T>(PackageField field, int neededSize)
