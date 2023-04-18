@@ -19,5 +19,11 @@ namespace Packages
         {
             return new Package() { PackageType = type, PackageSubtype = subtype };
         }
+
+        public static Package Create(PackageType type)
+        {
+            var types = PackageTypeManager.GetType(type);
+            return Create(types.Item1, types.Item2);
+        }
     }
 }

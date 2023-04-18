@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{7D5ACDCA-2109-4F3D-9F0E-29F5C62A9D18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Packages", "Packages\Packages.csproj", "{C0CEE10A-A48A-47A3-9D64-5637E4AEF5B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packages", "Packages\Packages.csproj", "{C0CEE10A-A48A-47A3-9D64-5637E4AEF5B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackageProtection", "PackageProtection\PackageProtection.csproj", "{03040325-DF2F-4B8D-B7EC-718819E55F4A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProtectTest", "ProtectTest\ProtectTest.csproj", "{38E3D285-FB5C-475B-907F-50DDF63A638E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Load Balancer", "Load Balanced\Load Balancer.csproj", "{642A5DDA-71B6-4319-B33A-E4D974E593DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7D5ACDCA-2109-4F3D-9F0E-29F5C62A9D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D5ACDCA-2109-4F3D-9F0E-29F5C62A9D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D5ACDCA-2109-4F3D-9F0E-29F5C62A9D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D5ACDCA-2109-4F3D-9F0E-29F5C62A9D18}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C0CEE10A-A48A-47A3-9D64-5637E4AEF5B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C0CEE10A-A48A-47A3-9D64-5637E4AEF5B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0CEE10A-A48A-47A3-9D64-5637E4AEF5B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0CEE10A-A48A-47A3-9D64-5637E4AEF5B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03040325-DF2F-4B8D-B7EC-718819E55F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03040325-DF2F-4B8D-B7EC-718819E55F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03040325-DF2F-4B8D-B7EC-718819E55F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03040325-DF2F-4B8D-B7EC-718819E55F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E3D285-FB5C-475B-907F-50DDF63A638E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E3D285-FB5C-475B-907F-50DDF63A638E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E3D285-FB5C-475B-907F-50DDF63A638E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E3D285-FB5C-475B-907F-50DDF63A638E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642A5DDA-71B6-4319-B33A-E4D974E593DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642A5DDA-71B6-4319-B33A-E4D974E593DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642A5DDA-71B6-4319-B33A-E4D974E593DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642A5DDA-71B6-4319-B33A-E4D974E593DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

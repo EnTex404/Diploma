@@ -11,6 +11,7 @@ namespace Packages
         UNKNOWN,
         GET,
         PUSH,
+        PROTECTED,
         HANDSHAKE
     }
 }

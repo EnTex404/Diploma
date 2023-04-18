@@ -37,24 +37,6 @@ namespace Packages
                 return null;
             }
 
-            var encrypted = false;
-
-            if (packet[0] != 0xAF ||
-                packet[1] != 0xAA ||
-                packet[2] != 0xAF)
-            {
-                if (packet[0] == 0x95 ||
-                    packet[1] == 0xAA ||
-                    packet[2] == 0xFF)
-                {
-                    encrypted = true;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
             var maxIndex = packet.Length - 1;
 
             if (packet[maxIndex - 1] != 0xFF ||
@@ -75,7 +57,6 @@ namespace Packages
                 if (fields.Length == 2)
                 {
                     return newPackage;
-                    //return encrypted ? DecryptPackage(newPackage) : newPackage;
                 }
 
                 var id = fields[0];
